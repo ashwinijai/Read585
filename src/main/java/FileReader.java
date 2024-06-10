@@ -18,12 +18,12 @@ public class FileReader {
                 if(lineNum >= 19) {
                     System.out.println(lineNum + "-" + line + " \n");
                     int length = line.length();
-                    System.out.println("Customer No - "+line.substring(0,15).trim());
-                    System.out.println("Customer Name - "+line.substring(15, 40).trim());
-                    System.out.println("Trans code - " + line.substring(40, 45).trim());
-                    System.out.println("From Acc Num - " + line.substring(45, 78).trim());
-                    System.out.println("To Acc Num - " + line.substring(78, 106).trim());
-                    System.out.println("Currency  - " + line.substring(106, length-1).trim());
+                    System.out.println("Customer No - "+line.substring(0,15).trim()); //Customer No length is 15(fixed)
+                    System.out.println("Customer Name - "+line.substring(15, 40).trim());//Customer name length cant be decided. we need to check on the max length
+                    System.out.println("Trans code - " + line.substring(40, 45).trim());//Transcode length is 3(fixed)
+                    System.out.println("From Acc Num - " + line.substring(45, 78).trim());//From Acc Num length is 23 (fixed)
+                    System.out.println("To Acc Num - " + line.substring(78, 106).trim());//To Acc Num length is 23 (fixed)
+                    System.out.println("Currency  - " + line.substring(106, length-1).trim());//Currency length is 3 (fixed)
                 }
             }
         }
